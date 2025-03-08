@@ -28,7 +28,7 @@
 }
 
 .Pmpml-container{
-    width:80%;
+    width:85%;
     height: 100%;
     background-color: white;
     flex-direction: column;
@@ -70,7 +70,7 @@
     }
 }
 .divInfo-One{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
     width:100%;
     justify-content: space-around;
@@ -97,9 +97,15 @@
 }
 
 .divInfo-Two{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-around;
+}
+
+.pass-type-2{
+    display: flex;
+    flex-direction: column;
+    gap:0.4rem;
 }
 
 .passtype-2-H2{
@@ -108,7 +114,7 @@
 }
 
 .pass-code{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     text-align: center;
     color:rgb(53, 53, 53);
     font-size:0.8rem;
@@ -143,6 +149,7 @@
 }
 
 .final-pass-footer{
+    margin-top: 1rem;
     font-size: 0.7rem;
     font-weight: 550;
     padding-top: 0.2rem;
