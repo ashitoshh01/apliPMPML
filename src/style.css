@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Montserrat', 'Poppins', sans-serif;
+}
+
+:root {
+    --header-color: rgb(188, 7, 7);
+    --background-color: #ffffff;
+    --light-gray: #bababa;
+    --gray: #4a4a4a;
+}
+
+.body{
+    height: 100vh;
+    width:100%;
+}
+
+.close-Pass{
+    width: 100%;
+    padding:2rem ;
+}
+
+.fa-regular{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.Pmpml-container{
+    width:90%;
+    height: 100%;
+    background-color: white;
+    flex-direction: column;
+    gap:1.5rem;
+    margin: 0 auto;
+    background-color: lightgrey;
+}
+
+.Pmpml-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    height: 2rem;
+    background-color: var(--header-color);
+    color:var(--background-color);
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+@media screen and (max-width:360px){
+    .Pmpml-header{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:320px){
+    .Pmpml-header{
+        font-size: 0.7rem;
+    }
+}
+.divInfo-One{
+    margin-top: 1rem;
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+}
+
+.pass-info-into{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+}
+
+.pass-bug{
+    gap:0.08rem;
+
+}
+
+.passtype-H1{
+    font-size:0.8rem;
+    color:var(--gray)
+}
+
+.passtype-H2{
+    font-size:1rem;
+}
+
+.divInfo-Two{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.passtype-2-H2{
+    font-size:0.9rem;
+    color:rgb(39, 38, 38)
+}
