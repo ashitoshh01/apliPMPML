@@ -159,4 +159,44 @@
     text-align: center;
     border-bottom-left-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
+    margin-bottom: 100rem;
+}
+
+.hrBro{
+    display: flex;
+align-items: center;
+    justify-content: space-between;
+}
+
+.horizontalRuler{
+    margin-top: 1.5rem;
+    width:100%;
+    border:none;
+    border-top: 2px dashed rgb(158, 158, 158);
+}
+
+.divBro1{
+    margin-top: 1.5rem;
+    margin-left: 0;
+    margin-right: 0.5rem;
+    height: 1rem;
+    width:1rem;
+    border-radius: 50%;
+    border-right:2px solid grey ;
+    border-top:2px solid grey ;
+    border-bottom:2px solid grey ;
+    border-left:2px solid white ;
+}
+
+.divBro2{
+    margin-top: 1.5rem;
+    margin-right: 0;
+    margin-left: 0.5rem;
+    height: 1rem;
+    width:1rem;
+    border-radius: 50%;
+    border-left:2px solid grey ;
+    border-top:2px solid grey ;
+    border-bottom:2px solid grey ;
+    border-right:2px solid white ;
 }
