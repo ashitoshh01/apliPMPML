@@ -16,65 +16,82 @@
     <div class="first-div">
         <div class="icon-back">
             <div class="icon-arrow">
-                <-- 
+                <i class="fa-solid fa-arrow-left"></i>
             </div>
-                    <div class="daily-pass">Daily Pass</div>
-            </div>
-            <div class="timer">
-                04:42
-            </div>
+            <div class="daily-pass">Daily Pass</div>
         </div>
+        <div class="timer" id="timer">
+            05:00
+        </div>
+    </div>
 
-        <div class="container">
+    <div class="container">
 
-            <div class="main-Container">
-                <div class="main-header">
-                    09 Mar,2025 | 12:55 PM
-                </div>
-                <div class="middle-content">
+        <div class="main-Container">
+            <div class="main-header" id="current-datetime">
+                08 Mar,2025 | 1:55 PM
+            </div>
+            <div class="middle-content">
+                <div class="pass-options">
                     <p class="main-para-1">Select pass type</p>
-                    <label for="PMC">Only PMC-₹40
-                        <input type="radio" name="PMC" id="PMC" value="PMC">
-                    </label>
-                    <label for="PCMC">Only PCMC-₹40
-                        <input type="radio" name="PCMC" id="PCMC" value="PCMC">
-                    </label>
-                    <label for="B-PCMC">PCMC and PMC-₹50
-                        <input type="radio" name="B-PCMC" id="B-PCMC" value="PCMC and PMC">
-                    </label>
-                    <label for="all">All Routes-₹120
-                        <input type="radio" name="all" id="all" value="All Routes">
-                    </label>
+                    <div class="pass-option">
+                        <input type="radio" id="pmc" name="pass" value="pmc">
+                        <label for="pmc">Only PMC - ₹40.0</label>
+                    </div>
 
-                    <div class="div-info-giver">
-                        Valid for PCMC Routes Only
+                    <div class="pass-option">
+                        <input type="radio" id="pcmc" name="pass" value="pcmc">
+                        <label for="pcmc">Only PCMC - ₹40.0</label>
+                    </div>
+
+                    <div class="pass-option">
+                        <input type="radio" id="pmc-pcmc" name="pass" value="pmc-pcmc">
+                        <label for="pmc-pcmc">PMC and PCMC - ₹50.0</label>
+                    </div>
+
+                    <div class="pass-option">
+                        <input type="radio" id="all-routes" name="pass" value="all-routes">
+                        <label for="all-routes">All Routes - ₹120.0</label>
                     </div>
                 </div>
 
-                <div class="bro1"></div>
-                <hr class="horizotal-line">
-                <div class="bro2"></div>
-
-                <div class="uniqueid-enter-info">
-                    Enter last 4 digits of your Aadhar Card or PAN Card
-                </div>
-                <div class="acutual-value-taker">
-                    <input id="aadhar-no">
-                </div>
-                <div class="warning-info">
-                    You should have a valid ID with above details.
+                <div class="div-info-giver">
+                    Valid for PCMC Routes Only
                 </div>
             </div>
 
-            <div class="footer-pay">
-                <div class="info-pay-tag">
-                    PAY USING
-                </div>
-                <div class="pay-button">
-                    <a href="main.html">PAY</a>
-                </div>
+            <div class="hr">
+                <div class="divBro1"></div>
+                <hr class="horizontalRuler">
+                <div class="divBro2"></div>
+            </div>
+
+            <div class="uniqueid-enter-info">
+                Enter last 4 digits of your Aadhar Card or PAN Card
+            </div>
+            
+            <div class="input-container">
+                <input type="text" id="digit-input" maxlength="4" oninput="formatInput(this)">
+            </div>
+            
+            
+            <div class="warning-info">
+                You should have a valid ID with above details.
             </div>
         </div>
+
+        <div class="footer-pay">
+            <div class="info-pay-tag">
+                <p class="para">PAY USING</p>
+                <img src="../img/phonepe.png" alt="phonepe" class="real-img"> 
+            </div>
+            <div class="pay-button">
+                <a href="main.html">PAY</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
