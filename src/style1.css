@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Montserrat', 'Poppins', sans-serif;
+}
+
+.first-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.icon-back{
+    width:40%;
+    display: flex;
+    gap:1.2rem;
+}
+
+.daily-pass{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.timer{
+    color: rgb(83, 83, 83);
+    font-size: 1rem;
+}
+
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+
+.main-header{
+    background-color: #219652;
+    color:white;
+}
