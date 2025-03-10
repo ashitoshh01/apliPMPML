@@ -82,22 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(() => {
-        // Retrieve Data from LocalStorage
-        let date = localStorage.getItem("date") || "N/A";
-        let time = localStorage.getItem("time") || "N/A";
-        let passType = localStorage.getItem("passType") || "N/A";
-        let fare = localStorage.getItem("fare") || "₹0";
-        let aadharNo = localStorage.getItem("aadharNo") || "0000";
+    let date = localStorage.getItem("date") || "N/A";
+    let time = localStorage.getItem("time") || "N/A";
+    let passType = localStorage.getItem("passType") || "N/A";
+    let fare = localStorage.getItem("fare") || "₹0";
+    let aadharNo = localStorage.getItem("aadharNo") || "0000";
 
-        // Debugging: Check if data is retrieved correctly
-        console.log("Retrieved Data:", { date, time, passType, fare, aadharNo });
-
-        // Update `main.html` dynamically
-        document.querySelector(".passtype-H2").innerText = passType;
-        document.querySelector(".pass-price h2").innerText = fare;
-        document.querySelector(".passtype-2-H2").innerText = `${date} | ${time}`;
-        document.querySelector(".pass-Id h2").innerText = aadharNo;
-
-    }, 300); // Small delay to ensure elements are available
+    document.querySelector(".passtype-H2").innerText = passType;
+    document.querySelector(".pass-price .passtype-H2").innerText = fare;  // Corrected selector
+    document.querySelector(".passtype-2-H2").innerText = `${date} | ${time}`;
+    document.querySelector(".pass-Id .passtype-H2").innerText = aadharNo;
 });
+
