@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         
-        validityTimeH2.innerText = `${dateComponents} ${year} | 11:59 PM`;
+        validityTimeH2.innerText = `${dateComponents} | 11:59 PM`;
     }
     
     // Generate dynamic pass code in format "YYMMDD(time:sec)1N3QEJ9"
