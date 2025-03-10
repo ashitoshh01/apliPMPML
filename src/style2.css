@@ -10,12 +10,12 @@
     --background-color: #ffffff;
     --light-gray: #bababa;
     --gray: #4a4a4a;
+
 }
 
 .body {
     height: 100vh;
     width: 100%;
-    background-color: rgb(90, 166, 187);
 }
 
 .close-Pass {
@@ -37,7 +37,7 @@
 }
 
 .Pmpml-container {
-    width: 85%;
+    width: 90%;
     height: 100%;
     background-color: white;
     flex-direction: column;
@@ -58,7 +58,7 @@
     text-align: center;
     padding:0.5rem;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     box-sizing: border-box;
     height: 3rem;
     background-color: var(--header-color);
