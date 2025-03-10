@@ -171,6 +171,8 @@ body {
 
 /* Warning Message */
 .warning-info {
+    width:95%;
+    margin:1rem auto;
     background-color: #FFF3CD;
     padding: 1rem;
     border-radius: 8px;
@@ -178,7 +180,6 @@ body {
     font-weight: bold;
     color: #d2a10f;
     text-align: center;
-    margin-top: 1rem;
 }
 
 /* Footer - Payment Section */
