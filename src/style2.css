@@ -19,7 +19,7 @@ body {
 }
 
 .close-Pass {
-    margin-top: 5rem;
+    margin-top: 10rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -61,8 +61,8 @@ body {
     height: 3rem;
     background-color: var(--header-color);
     color: var(--background-color);
-    border-top-left-radius: 0.4rem;
-    border-top-right-radius: 0.4rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 @media screen and (max-width:360px) {
@@ -169,9 +169,8 @@ body {
     background-color: var(--header-color);
     color: white;
     text-align: center;
-    border-bottom-left-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
-    margin-bottom: 100rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .hrBro {
@@ -213,4 +212,8 @@ body {
     border-top: 2px solid rgb(211, 211, 211);
     border-bottom: 2px solid rgb(211, 211, 211);
     border-right: 2px solid transparent;
+}
+
+.headerone a, .headertwo{
+    color:rgb(60, 60, 60);
 }

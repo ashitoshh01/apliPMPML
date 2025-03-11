@@ -1,25 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get elements
+    
     const pinDigits = document.querySelectorAll('.pin-digit');
     const keys = document.querySelectorAll('.key');
     const successSound = document.getElementById('success-sound');
     
-    // Display the amount from local storage if available
     const storedFare = localStorage.getItem("fare") || "₹20.0";
     const fareAmount = storedFare.replace('₹', '').trim();
     document.getElementById('display-amount').textContent = fareAmount;
 
-    // Store entered PIN
+    
     let currentPin = '';
     const correctPin = '1245';
 
-    // Add click event to all keys
+    
     keys.forEach(key => {
         key.addEventListener('click', function() {
             const value = this.getAttribute('data-value');
             
             if (value === 'clear') {
-                // Clear the last digit
+                
                 if (currentPin.length > 0) {
                     currentPin = currentPin.slice(0, -1);
                     updatePinDisplay();
@@ -73,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     }
 
-    // Add shake animation CSS
+    
     const style = document.createElement('style');
     style.textContent = `
         @keyframes shake {
