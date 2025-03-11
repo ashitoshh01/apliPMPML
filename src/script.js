@@ -1,4 +1,3 @@
-
 // 5 min timer
 let timeLeft = 5 * 60;
 
@@ -75,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("fare", fare);
         localStorage.setItem("aadharNo", aadharNo);
 
-        // Redirect to main.html
-        window.location.href = "main.html";
+        // Redirect to payment.html instead of main.html
+        window.location.href = "payment.html";
     });
 });
 
@@ -93,4 +92,3 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".passtype-2-H2").innerText = `${date} | ${time}`;
     document.querySelector(".pass-Id .passtype-H2").innerText = aadharNo;
 });
-

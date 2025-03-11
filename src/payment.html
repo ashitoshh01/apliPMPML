@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="payment-container">
+        <div class="payment-header">
+            <div class="payment-id">
+                <img src="../img/upi.png" alt="upi" class="upi-logo">
+            </div>
+            <div class="payment-logo">UPI</div>
+        </div>
+
+        <div class="payment-details">
+            <div class="payment-to">
+                <div class="label">To:</div>
+                <div class="value recipient-name">PMPML</div>
+            </div>
+            <div class="payment-amount">
+                <div class="label">Sending:</div>
+                <div class="value amount">₹ <span id="display-amount">20.00</span></div>
+            </div>
+        </div>
+
+        <div class="pin-section">
+            <div class="pin-label">ENTER 4-DIGIT UPI PIN</div>
+            <div class="pin-input">
+                <div class="pin-digit" id="digit1"></div>
+                <div class="pin-digit" id="digit2"></div>
+                <div class="pin-digit" id="digit3"></div>
+                <div class="pin-digit" id="digit4"></div>
+            </div>
+        </div>
+
+        <div class="warning-message">
+            <div class="warning-icon">
+                <i class="fa-solid fa-exclamation-circle"></i>
+            </div>
+            <div class="warning-text">
+                You are transferring money from your account to PMPML
+            </div>
+        </div>
+
+        <div class="keypad">
+            <div class="keypad-row">
+                <div class="key" data-value="1">1</div>
+                <div class="key" data-value="2">2</div>
+                <div class="key" data-value="3">3</div>
+            </div>
+            <div class="keypad-row">
+                <div class="key" data-value="4">4</div>
+                <div class="key" data-value="5">5</div>
+                <div class="key" data-value="6">6</div>
+            </div>
+            <div class="keypad-row">
+                <div class="key" data-value="7">7</div>
+                <div class="key" data-value="8">8</div>
+                <div class="key" data-value="9">9</div>
+            </div>
+            <div class="keypad-row">
+                <div class="key clear" data-value="clear">✕</div>
+                <div class="key" data-value="0">0</div>
+                <div class="key confirm" data-value="confirm">✓</div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="success-sound" src="success.mp3"></audio>
+    
+    <script src="payment.js"></script>
+</body>
+
+</html>
