@@ -78,4 +78,140 @@ document.addEventListener("DOMContentLoaded", function () {
         
         passCodeElement.innerText = passCode;
     }
+    
+    // Add click event for "All passes" link
+    const allPassesHeading = document.querySelector(".headertwo");
+    if (allPassesHeading && allPassesHeading.textContent.trim() === "All passes") {
+        allPassesHeading.addEventListener("click", function(e) {
+            e.preventDefault();
+            showNoPassesPopup();
+        });
+    }
+    
+    // Function to show the "No passes" popup
+    function showNoPassesPopup() {
+        // Create popup container
+        const popupContainer = document.createElement("div");
+        popupContainer.classList.add("no-passes-popup");
+        
+        // Create popup content
+        popupContainer.innerHTML = `
+            <div class="popup-content">
+                <div class="popup-header">
+                    <span class="close-popup">&times;</span>
+                </div>
+                <div class="popup-body">
+                    <div class="popup-icon">
+                        <i class="fa-solid fa-exclamation-circle"></i>
+                    </div>
+                    <h3>No active passes found</h3>
+                    <p>You don't have any other active passes at the moment.</p>
+                </div>
+                <div class="popup-footer">
+                    <button class="popup-button">OK</button>
+                </div>
+            </div>
+        `;
+        
+        // Add popup styles
+        const popupStyles = document.createElement("style");
+        popupStyles.textContent = `
+            .no-passes-popup {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+            
+            .popup-content {
+                background-color: white;
+                width: 85%;
+                max-width: 350px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                animation: popup-scale 0.3s ease-out;
+            }
+            
+            @keyframes popup-scale {
+                0% { transform: scale(0.7); opacity: 0; }
+                100% { transform: scale(1); opacity: 1; }
+            }
+            
+            .popup-header {
+                padding: 10px 15px;
+                text-align: right;
+            }
+            
+            .close-popup {
+                font-size: 24px;
+                font-weight: bold;
+                cursor: pointer;
+                color: #666;
+            }
+            
+            .popup-body {
+                padding: 10px 20px 20px;
+                text-align: center;
+            }
+            
+            .popup-icon {
+                font-size: 40px;
+                color: #d1412e;
+                margin-bottom: 15px;
+            }
+            
+            .popup-body h3 {
+                margin-bottom: 10px;
+                color: #333;
+            }
+            
+            .popup-body p {
+                color: #666;
+            }
+            
+            .popup-footer {
+                padding: 15px;
+                text-align: center;
+                background-color: #f8f8f8;
+            }
+            
+            .popup-button {
+                background-color: #d1412e;
+                color: white;
+                border: none;
+                padding: 8px 30px;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+            
+            .popup-button:hover {
+                background-color: #b63727;
+            }
+        `;
+        
+        // Add to document
+        document.head.appendChild(popupStyles);
+        document.body.appendChild(popupContainer);
+        
+        // Close popup events
+        const closeButton = popupContainer.querySelector(".close-popup");
+        const okButton = popupContainer.querySelector(".popup-button");
+        
+        closeButton.addEventListener("click", function() {
+            document.body.removeChild(popupContainer);
+        });
+        
+        okButton.addEventListener("click", function() {
+            document.body.removeChild(popupContainer);
+        });
+    }
 });

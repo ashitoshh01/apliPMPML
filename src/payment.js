@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Visual feedback
                     document.querySelector('.confirm').style.backgroundColor = '#4CAF50';
                     
-                    // Redirect to main.html after a short delay
+                    // Redirect to payment-success.html instead of main.html
                     setTimeout(() => {
-                        window.location.href = 'main.html';
+                        window.location.href = 'payment-success.html';
                     }, 1000);
                 } else {
                     // Show error for incorrect PIN
